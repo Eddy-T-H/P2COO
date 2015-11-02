@@ -3,34 +3,34 @@ package ressource;
 import action.Action;
 
 
-public class LibererRessource<E extends Ressource> extends Action {
+public class FreeResourceAction<E extends Resource> extends Action {
 
-	private RessourceUser<E> user;
-	private GestionnaireRessources<E> gestionnaire; 
+	private ResourcefulUser<E> user;
+	private ResourcePool<E> gestionnaire; 
 	
-	public LibererRessource(String message, GestionnaireRessources<E> gestionnaire, RessourceUser<E> user){
+	public FreeResourceAction(String message, ResourcePool<E> gestionnaire, ResourcefulUser<E> user){
 		super(message);
 		this.user = user;
 		this.gestionnaire = gestionnaire;
 	}
 	
-	private boolean isOver = false;
+	private boolean isFinished = false;
 	
 	@Override
 	public void internalStep() {
 		try {
 			gestionnaire.libererRessource(user.getRessource());
-		} catch (RessourceInvalideException e) {
+		} catch (IllegalArgumentException e) {
 			System.out.print(" ne peut pas rendre\n");
 			return;
 		}
-		isOver = true;
+		isFinished = true;
 		System.out.print(""+this.getMessage());
 	}
 
 	@Override
 	public boolean stopCondition() {
-		return isOver;
+		return isFinished;
 	}
 
 }

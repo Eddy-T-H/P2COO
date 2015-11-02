@@ -44,8 +44,8 @@ public abstract class Action {
 	/**
 	 * Step.
 	 */
-	public void step(){
-		if (this.isOver()){
+	public void doStep(){
+		if (this.isFinished()){
 			throw new IllegalStateException("Action over");
 		}
 		if(!this.hasBegun()){
@@ -109,7 +109,7 @@ public abstract class Action {
 	 *
 	 * @return true, if it's over
 	 */
-	public boolean isOver(){
+	public boolean isFinished(){
 		return this.getState() == ActionState.OVER;
 	}
 

@@ -1,14 +1,14 @@
 package action;
 
 
-public class Scheduler extends Ordonnanceur {
+public class FairScheduler extends Ordonnanceur {
 
 	@Override
 	public void internalStep() {
 		Action action;
 		action = this.getActions().get(this.incrementIndex());
-		action.step();
-		if(action.isOver()){
+		action.doStep();
+		if(action.isFinished()){
 			this.getActions().remove(action);
 			this.decrementIndex();
 		}

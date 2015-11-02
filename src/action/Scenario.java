@@ -8,8 +8,8 @@ public class Scenario extends Ordonnanceur {
 		Action action;
 		action = this.getActions().get(0);
 		System.out.print(""+this.getMessage());
-		action.step();
-		if(action.isOver()){
+		action.doStep();
+		if(action.isFinished()){
 			this.getActions().remove(0);
 		}
 	}

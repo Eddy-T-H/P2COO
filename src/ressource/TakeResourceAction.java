@@ -3,12 +3,12 @@ package ressource;
 import action.Action;
 
 
-public class PrendreRessource<E extends Ressource> extends Action {
+public class TakeResourceAction<E extends Resource> extends Action {
 
-	private RessourceUser<E> user;
-	private GestionnaireRessources<E> gestionnaire; 
+	private ResourcefulUser<E> user;
+	private ResourcePool<E> gestionnaire; 
 	
-	public PrendreRessource(String message, GestionnaireRessources<E> gestionnaire, RessourceUser<E> user){
+	public TakeResourceAction(String message, ResourcePool<E> gestionnaire, ResourcefulUser<E> user){
 		super(message);
 		this.user = user;
 		this.gestionnaire = gestionnaire;

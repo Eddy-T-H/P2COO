@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 
-public class GestionnaireRessources<E extends Ressource> {
+public class ResourcePool<E extends Resource> {
 
 	/**
 	 * @uml.property  name="ressources"
@@ -59,8 +59,8 @@ public class GestionnaireRessources<E extends Ressource> {
 	}
 
 	
-	public void libererRessource(E ressource) throws RessourceInvalideException{
-		if(!this.getRessources().contains(ressource)) throw new RessourceInvalideException();
+	public void libererRessource(E ressource) throws IllegalArgumentException{
+		if(!this.getRessources().contains(ressource)) throw new IllegalArgumentException();
 		this.availableRessources.add(ressource);
 	}
 		
@@ -75,11 +75,11 @@ public class GestionnaireRessources<E extends Ressource> {
 			
 			/**
 			 */
-	public GestionnaireRessources(Collection<E> ressources){
+	public ResourcePool(Collection<E> ressources){
 		this.setRessources(ressources);
 	}
 
-	public GestionnaireRessources(){
+	public ResourcePool(){
 		this.setRessources(null);
 	}
 

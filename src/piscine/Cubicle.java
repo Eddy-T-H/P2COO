@@ -1,12 +1,11 @@
 package piscine;
 
-import ressource.Ressource;
+import ressource.Resource;
 
 
+public class Cubicle implements Resource {
 
-public class Panier implements Ressource {
 
-	
 	String description = "";
 	
 	@Override
@@ -14,14 +13,14 @@ public class Panier implements Ressource {
 		return description;
 	}
 
-	public Panier(String description){
+	public Cubicle(String description){
 		this.description = description;
 	}
 
 		
 		/**
 		 */
-		public Panier(){
+		public Cubicle(){
 		}
 
 }

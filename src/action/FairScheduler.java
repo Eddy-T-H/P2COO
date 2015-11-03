@@ -19,6 +19,4 @@ public class FairScheduler extends Scheduler {
 		this.getActions().add(this.getIndexCurrentAction(), action);
 		this.incrementIndexCurrentAction();
 	}
-	
-
 }

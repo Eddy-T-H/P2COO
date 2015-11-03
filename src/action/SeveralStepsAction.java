@@ -36,9 +36,7 @@ public class SeveralStepsAction extends Action{
 
 	@Override
 	public boolean stopCondition() {
-		boolean boooo = stepsdone>=stepstoperform;
-		System.out.println("waiting stopcond " + boooo );
-		return boooo;
+		return  stepsdone>=stepstoperform;
 	}
 
 	private void updateMessageStatus(){

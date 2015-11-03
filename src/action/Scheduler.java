@@ -56,7 +56,7 @@ public abstract class Scheduler extends Action {
 	}
 	
 	public boolean stopCondition() {
-		System.out.println("stopCondition scheduler" + actions.isEmpty());
+		System.out.println("stopCondition scheduler " + actions.isEmpty());
 		return actions.isEmpty();
 		
 	}

@@ -8,7 +8,7 @@ public class Scenario extends Scheduler {
 		Action action;
 		action = this.getActions().get(0);
 		System.out.print(""+this.getMessage());
-		action.doStep();
+		action.doActionStep();
 		if(action.isFinished()){
 			this.getActions().remove(0);
 		}

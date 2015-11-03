@@ -7,7 +7,18 @@ public abstract class ResourcePool<T extends Resource> {
 	int numberResources;
 	protected ArrayList<T> resources = new ArrayList<T>();
 	protected ArrayList<T> usedResources = new ArrayList<T>();
+	String contentName;
 	
+
+	
+	public String getContentName() {
+		return contentName;
+	}
+
+	public void setContentName(String contentName) {
+		this.contentName = contentName;
+	}
+
 	public ResourcePool(int nb){
 		this.numberResources = nb;
 		this.resources = new ArrayList<T>(this.numberResources);

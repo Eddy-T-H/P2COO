@@ -17,10 +17,11 @@ public class FreeResourceAction<E extends Resource> extends ResourcePoolAction<E
 			rp.freeResource(user.getResource());
 
 		}catch(IllegalArgumentException e){
-			System.out.println(" can't give back\n");
+			System.out.println(" can't give back");
+			return;
 		}
 		this.isFinished = true;
-		System.out.println(""+this.getMessage());
+		System.out.println(this.getMessage());
 	}
 
 

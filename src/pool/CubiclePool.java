@@ -7,6 +7,7 @@ public class CubiclePool extends ResourcePool<Cubicle>{
 
 	public CubiclePool(int nb) {
 		super(nb);
+		this.setContentName("cublicle");
 	}
 
 	@Override

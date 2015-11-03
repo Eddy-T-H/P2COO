@@ -63,11 +63,8 @@ public abstract class Action {
 			this.setStatePending();
 		}
 		this.doStep();
-		System.out.println("étape");
-		System.out.println(this.stopCondition());
 		
 		if(this.stopCondition()){
-			System.out.println("fini");
 			this.setStateFinished();
 		}
 	}

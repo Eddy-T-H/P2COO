@@ -20,11 +20,12 @@ public class TakeResourceAction<E extends Resource> extends ResourcePoolAction<E
 			ressource = (E) this.rp.provideResource();
 
 		} catch(NoSuchElementException e){
-			System.out.println(" can't take\n");
+			System.out.println(" is trying to take resource from pool " + rp.getContentName() + " ...  failed");
+			return;
 		}
 		user.setResource(ressource);
 		this.isFinished = true;
-		System.out.println(""+this.getMessage());
+		System.out.println(this.getMessage());
 	}
 
 

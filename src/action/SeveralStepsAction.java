@@ -13,8 +13,8 @@ public class SeveralStepsAction extends Action{
 	
 	public SeveralStepsAction(String string, int steps) {
 		super(string);
-		this.setStepstoperform(steps);
-		this.setMessage(string);
+		mess = string;
+		this.stepstoperform = steps;
 		this.updateMessageStatus();
 	}
 

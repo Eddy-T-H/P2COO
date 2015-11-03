@@ -4,8 +4,11 @@ import resource.ResourcePool;
 
 public class BasketPool extends ResourcePool<Basket>{
 	
+
+	
 	public BasketPool(int nb){
 		super(nb);
+		this.setContentName("basket");
 	}
 
 	@Override

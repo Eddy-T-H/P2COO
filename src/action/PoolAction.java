@@ -1,7 +1,7 @@
 package action;
 
 
-public class Scenario extends Scheduler {
+public class PoolAction extends Scheduler {
 
 	@Override
 	public void doStep() {

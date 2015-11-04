@@ -3,13 +3,13 @@ package pool;
 
 
 import action.FreeResourceAction;
-import action.Scenario;
+import action.PoolAction;
 import action.TakeResourceAction;
 import action.SeveralStepsAction;
 import resource.ResourcePool;
 import resource.ResourcefulUser;
 
-public class Swimmer extends Scenario{
+public class Swimmer extends PoolAction{
 	
 	private ResourcefulUser<Basket> userPanier = new ResourcefulUser<Basket>();
 	private ResourcefulUser<Cubicle> userCabine = new ResourcefulUser<Cubicle>();
